@@ -31,13 +31,13 @@ public class Main extends JComponent implements MouseListener{
     };
     
     final int SCREEN_SIDE_TILES = 7;
-    final int GRID_SIDE_TILES = 3;
+    final int GRID_SIDE_TILES = 4;
     final int TILE_WIDTH = SCR_WIDTH / SCREEN_SIDE_TILES, TILE_HEIGHT = SCR_HEIGHT / SCREEN_SIDE_TILES;
     // grid starts 2 right, 1 down from top left corner
     final Rectangle GRID_RECT = new Rectangle(2, 1, GRID_SIDE_TILES, GRID_SIDE_TILES);
     CellState[][] grid = new CellState[GRID_SIDE_TILES][GRID_SIDE_TILES];
     
-    int movesLeft = 9;
+    int movesLeft = GRID_SIDE_TILES * GRID_SIDE_TILES;
     
     Point winStartPos = new Point(), winEndPos = new Point(), lastMove = new Point(-1, -1);
     CellState winner = CellState.EMPTY;
@@ -289,7 +289,7 @@ public class Main extends JComponent implements MouseListener{
         currentPlayer = CellState.PLAYER_X;
         
         lastMove.setLocation(-1, -1);
-        movesLeft = 9;
+        movesLeft = GRID_SIDE_TILES * GRID_SIDE_TILES;
         
         gameOver = false;
         winner = CellState.EMPTY;
