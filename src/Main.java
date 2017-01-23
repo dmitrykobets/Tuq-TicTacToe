@@ -31,7 +31,7 @@ public class Main extends JComponent implements MouseListener{
     };
     
     final int SCREEN_SIDE_TILES = 7;
-    final int GRID_SIDE_TILES = 4;
+    final int GRID_SIDE_TILES = 3;
     final int TILE_WIDTH = SCR_WIDTH / SCREEN_SIDE_TILES, TILE_HEIGHT = SCR_HEIGHT / SCREEN_SIDE_TILES;
     // grid starts 2 right, 1 down from top left corner
     final Rectangle GRID_RECT = new Rectangle(2, 1, GRID_SIDE_TILES, GRID_SIDE_TILES);
